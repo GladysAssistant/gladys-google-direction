@@ -50,3 +50,37 @@ gladys.direction.travelTime({
 })
 .catch(console.log)
 ```
+
+If you want to estimate the travel time at a given time, just do:
+
+```javascript
+gladys.direction.travelTime({
+    origin: '12 rue des champs élysées 75008 Paris',
+    destination: '132 Rue de Courcelles, 75017 Paris',
+    departure_time: 1496005045 // TIMESTAMP in seconds
+})
+.then(function(result){
+    // result = { duration: 493 } 
+    // duration is in seconds
+    console.log(`Travel time is ${result.duration} seconds`);
+})
+.catch(console.log)
+```
+
+You can pass your travel preferences:
+
+```javascript
+gladys.direction.travelTime({
+    origin: '12 rue des champs élysées 75008 Paris',
+    destination: '132 Rue de Courcelles, 75017 Paris',
+    mode: 'transit' // we will take public transportation! 
+})
+.then(function(result){
+    // result = { duration: 493 } 
+    // duration is in seconds
+    console.log(`Travel time is ${result.duration} seconds`);
+})
+.catch(console.log)
+```
+
+It supports all the options listed on Google Documentation => [https://developers.google.com/maps/documentation/directions/intro](https://developers.google.com/maps/documentation/directions/intro)
