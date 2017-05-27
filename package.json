@@ -1,0 +1,11 @@
+{
+  "name": "gladys-google-direction",
+  "version": "0.1.0",
+  "description": "Gladys module to calculate travel time between two points",
+  "main": "index.js",
+  "author": "Pierre-Gilles Leymarie",
+  "dependencies": {
+    "@google/maps": "^0.3.1"
+  },
+  "license": "CC-BY-NC-SA-3.0"
+}
